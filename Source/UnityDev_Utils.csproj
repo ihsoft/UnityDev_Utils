@@ -49,6 +49,8 @@
       <Compile Include="LogUtils\LoggingSettings.cs" />
       <Compile Include="ModelUtils\Hierarchy.cs" />
       <Compile Include="Properties\AssemblyInfo.cs" />
+      <Compile Include="ReflectionUtils\ReflectedAction.cs" />
+      <Compile Include="ReflectionUtils\ReflectedField.cs" />
     </ItemGroup>
     <ItemGroup>
       <Reference Include="System" />
