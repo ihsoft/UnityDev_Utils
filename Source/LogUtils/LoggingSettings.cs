@@ -19,7 +19,9 @@ namespace UnityDev.LogUtils {
 public static class LoggingSettings {
 
   #region Settings group
+  /// <summary>Logging settings.</summary>
   public class SettingsGroup : PersistentNode {
+    /// <summary>Defines which logs above "info" level are to be reported.</summary>
     public int verbosityLevel = 0;
   }
 
@@ -28,7 +30,6 @@ public static class LoggingSettings {
     // ReSharper disable once StringLiteralTypo
     var configPath = ModPaths.MakeAbsPathForPlugin(typeof(LoggingSettings), "UnityDev_logsettings.cfg");
     if (File.Exists(configPath)) {
-      //var config = ConfigNode.ParseFileAsNode(configPath);
       var config = SimpleTextSerializer.LoadFromFile(configPath);
       if (config != null) {
         _settings.LoadFromConfigNode(config);
@@ -39,7 +40,6 @@ public static class LoggingSettings {
   #endregion
 
   /// <summary>Settings group.</summary>
-  //public static SettingsGroup Settings => _settings ??= new SettingsGroup();
   public static SettingsGroup Settings {
     get {
       if (_settings == null) {

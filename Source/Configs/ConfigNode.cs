@@ -151,6 +151,7 @@ public class ConfigNode {
     return !_nodeFields.TryGetValue(key, out var nodeList) ? Array.Empty<ConfigNode>() : nodeList;
   }
 
+  /// <inheritdoc/>
   public override string ToString() {
     return $"{{ConfigNode '{Name}': fields={_valueFields.Count+_nodeFields.Count}}}";
   }
